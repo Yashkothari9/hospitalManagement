@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "099627d4-9258-4ff3-b442-7ededd028697",
+		"name": "Hospital Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15282331"
+	},
+	"item": [
+		{
+			"name": "HealthCheck",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddPatient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Yash\",\n    \"age\":\"21\",\n    \"roomNo\":\"201\",\n    \"doctorName\":\"Dr.P\",\n    \"admitDate\":\"20.09.2023\",\n    \"expense\":\"2000\",\n    \"status\":\"ADMITTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/hms/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUpStaff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"staffEmailId\":\"y@google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/hms/staff/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"staff",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginStaff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/hms/staff/login?emailId=y@google.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"staff",
+						"login"
+					],
+					"query": [
+						{
+							"key": "emailId",
+							"value": "y@google.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAdmittedPatient",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "staffEmailId",
+						"value": "y@google.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/hms/patient/admitted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"patient",
+						"admitted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DischargePatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "staffEmailId",
+						"value": "y@google.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/hms/patient/discharge/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"patient",
+						"discharge",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePatient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "staffEmailId",
+						"value": "y@google.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Yash\",\n    \"age\":\"21\",\n    \"roomNo\":\"201\",\n    \"doctorName\":\"Dr.P\",\n    \"expense\":\"2000\",\n    \"status\":\"ADMITTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/hms/patient/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hms",
+						"patient",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

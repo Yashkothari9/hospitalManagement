@@ -1,6 +1,6 @@
 # Hospital Management System
 
-This is a Hospital Management System implemented using Java Spring Boot. It provides a web application for hospital staff to manage patients, including user authentication and various patient-related operations via REST APIs.
+This is a Hospital Management System implemented using Java Spring Boot. It provides a web application for hospital staff to manage patients, including staff login and signup and various patient-related operations via REST APIs.
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@ This is a Hospital Management System implemented using Java Spring Boot. It prov
 4. [API Endpoints](#api-endpoints)
 5. [Database Schema](#database-schema)
 6. [Code Structure](#code-structure)
+7. [Assumtions](#assumtions)
 
 ## Features
 
@@ -33,7 +34,7 @@ To run this application, you need:
 ## Setup and Usage
 
 1. Clone the repository to your local machine:
-   git clone git@github.com:Yashkothari9/HospitalManagementSystem.git
+   `git clone git@github.com:Yashkothari9/HospitalManagementSystem.git`
 2. Navigate to the project directory:
    cd hospitalManagementSystem
 3.  Configure your database connection in `src/main/resources/application.properties`.
